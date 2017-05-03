@@ -1,0 +1,418 @@
+@import url(fonts.css);
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'PT Sans', "MyriadProRegular", Helvetica, Arial, sans-serif;
+  background-color: #797979;
+}
+
+input,
+button,
+fieldset {
+  border: none;
+  outline: none;
+  background: none;
+  font-family: 'PT Sans', "MyriadProRegular", Helvetica, Arial, sans-serif;
+}
+
+body,
+fieldset {
+  margin: 0;
+  padding: 0;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+.page-wrapper {
+  position: relative;
+  display: block;
+  width: 100%;
+  max-width: 1020px;
+  margin: 0 auto;
+  padding-right: 10px;
+  padding-left: 10px;
+  padding-bottom: 60px;
+  background: url("../img/bg_pattern.png");
+}
+
+.container {
+  display: block;
+  width: 100%;
+  max-width: 771px;
+  margin: 0 auto;
+}
+
+/************HEADER***********/
+.page-header {
+  padding-top: 60px;
+}
+
+.page-header__top {
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: space-between;
+  margin-bottom: 4px;
+}
+.page-header__top img {
+  display: block;
+  margin-top: -15px;
+  margin-right: -10px;
+}
+
+.page-header__logo {
+  display: flex;
+  align-items: flex-start;
+}
+.page-header__logo img {
+  margin-top: 1px;
+}
+
+.page-header__bottom {
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: center;
+  margin-bottom: 50px;
+}
+.page-header__bottom .img-wrapper {
+  display: flex;
+  width: 320px;
+  justify-content: flex-start;
+}
+
+/************FORM***********/
+.page-form {
+  padding-top: 20px;
+}
+
+.page-form__group {
+  display: flex;
+  margin-bottom: 35px;
+}
+.page-form__group label {
+  flex-basis: auto;
+  align-items: flex-end;
+  margin-right: 10px;
+  font-weight: 700;
+  font-size: 22.43px;
+  color: #2f1b15;
+}
+.page-form__group .custom-input {
+  flex-grow: 2;
+  position: relative;
+  margin-top: -20px;
+}
+.page-form__group .custom-input::after {
+  position: absolute;
+  content: "";
+  display: block;
+  width: 100%;
+  height: 4px;
+  background: url("../img/square.png") repeat;
+  background-position: 0 0;
+}
+.page-form__group input {
+  width: 100%;
+  padding-left: 10px;
+  font-family: "Courier New", Courier, monospace;
+  font-size: 30px;
+  line-height: 36px;
+}
+
+/************SECTION***********/
+.page-form-block {
+  margin-bottom: 20px;
+}
+
+.page-form__title {
+  display: block;
+  margin: 0;
+  margin-bottom: 5px;
+  font-family: 'PT Sans', sans-serif;
+  font-weight: 700;
+  font-size: 24px;
+  line-height: 1.5;
+  color: #2f1b15;
+}
+
+.page-form__paragraph {
+  display: block;
+  margin: 0;
+  color: #3d3d3d;
+  font-size: 15px;
+  line-height: 24px;
+}
+
+/************CHECKBOX STYLING***********/
+.page__form-checkbox {
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: space-between;
+  margin-top: 30px;
+  margin-bottom: 50px;
+}
+.page__form-checkbox div {
+  display: block;
+  margin-bottom: 10px;
+}
+.page__form-checkbox fieldset {
+  width: 260px;
+}
+.page__form-checkbox label {
+  display: block;
+  line-height: 25px;
+  font-size: 21px;
+  font-weight: 700;
+}
+.page__form-checkbox fieldset:nth-child(3) label {
+  font-weight: 400;
+}
+
+input[type="checkbox"]:not(:checked),
+input[type="checkbox"]:checked {
+  display: none;
+}
+
+input[type="checkbox"]:not(:checked) + label,
+input[type="checkbox"]:checked + label {
+  position: relative;
+  padding-left: 1.3em;
+  cursor: pointer;
+}
+
+input[type="checkbox"]:not(:checked) + label:before,
+input[type="checkbox"]:checked + label:before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 4px;
+  width: 19px;
+  height: 18px;
+  border: none;
+  background: transparent url("../img/checkbox.png") no-repeat;
+}
+
+input[type="checkbox"]:not(:checked) + label:after,
+input[type="checkbox"]:checked + label:after {
+  content: "";
+  position: absolute;
+  top: -6px;
+  left: 3px;
+  width: 21px;
+  height: 27px;
+  background: url("../img/sign.png");
+  transition: all .2s;
+}
+
+[type="checkbox"]:not(:checked) + label:after {
+  opacity: 0;
+  transform: scale(0);
+}
+
+[type="checkbox"]:checked + label:after {
+  opacity: 1;
+  transform: scale(1);
+}
+
+.page-form__measure {
+  margin-top: 20px;
+  padding-bottom: 23px;
+  position: relative;
+}
+.page-form__measure::before {
+  content: "";
+  position: absolute;
+  display: block;
+  top: -16px;
+  right: -7px;
+  width: 17px;
+  height: 14px;
+  background: url("../img/arrow_down.png") no-repeat;
+}
+
+.line {
+  display: block;
+  max-width: 100%;
+  height: 4px;
+  background: url("../img/bg_line.png");
+}
+
+.page-form-vertical-wrapper {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: flex-start;
+  padding-top: 32px;
+  position: relative;
+}
+
+.page-form__vertical-line {
+  font-size: 13px;
+  line-height: 1.4;
+  font-weight: 700;
+}
+
+.page-form__vertical-line:nth-child(1) {
+  flex-basis: 150px;
+}
+.page-form__vertical-line:nth-child(1)::before {
+  content: "";
+  position: absolute;
+  top: -1px;
+  left: 0;
+  width: 14px;
+  height: 26px;
+  background: url("../img/vertical_line_1.png") no-repeat;
+}
+
+.page-form__vertical-line:nth-child(2) {
+  flex-basis: 222px;
+}
+.page-form__vertical-line:nth-child(2)::before {
+  content: "";
+  position: absolute;
+  top: -1px;
+  left: 145px;
+  width: 20px;
+  height: 11px;
+  background: url("../img/vertical_line_2.png") no-repeat;
+}
+
+.page-form__vertical-line:nth-child(3) {
+  flex-basis: 170px;
+}
+.page-form__vertical-line:nth-child(3)::before {
+  content: "";
+  position: absolute;
+  top: -1px;
+  left: 365px;
+  width: 20px;
+  height: 11px;
+  background: url("../img/vertical_line_2.png") no-repeat;
+}
+
+.page-form__vertical-line:nth-child(4) {
+  flex-grow: 1;
+  text-align: right;
+}
+.page-form__vertical-line:nth-child(4)::before {
+  content: "";
+  position: absolute;
+  top: -3px;
+  right: 0px;
+  width: 10px;
+  height: 25px;
+  background: url("../img/vertical_line_4.png") no-repeat;
+}
+
+.page-form-area {
+  display: block;
+  width: 100%;
+  margin-bottom: 50px;
+  word-wrap: break-word;
+  padding-left: 10px;
+  resize: none;
+  height: 700px;
+  overflow: hidden;
+  outline: none;
+  background: none;
+  color: #222;
+  font-family: "Courier New", Courier, monospace;
+  font-weight: normal;
+  font-size: 24px;
+  line-height: 50px;
+  background-image: url("../img/teaxarea_line.png");
+  background-repeat: repeat-y;
+  background-position-y: 15px;
+  background-size: 774px 50px;
+  border: none;
+}
+
+.page__form-radio {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: flex-start;
+  margin-bottom: 80px;
+}
+.page__form-radio div {
+  margin-right: 18px;
+}
+
+input[type="radio"]:not(:checked),
+input[type="radio"]:checked {
+  display: none;
+}
+
+input[type="radio"]:not(:checked) + label,
+input[type="radio"]:checked + label {
+  display: inline-block;
+  vertical-align: middle;
+  position: relative;
+  padding-left: 1.7em;
+  cursor: pointer;
+  height: 2em;
+  font-size: 20px;
+  font-weight: 700;
+}
+
+input[type="radio"]:not(:checked) + label:before,
+input[type="radio"]:checked + label:before {
+  content: "";
+  position: absolute;
+  left: -7px;
+  top: -11px;
+  width: 41px;
+  height: 38px;
+  border: none;
+  background: transparent url("../img/radio.png") no-repeat;
+}
+
+input[type="radio"]:not(:checked) + label:after,
+input[type="radio"]:checked + label:after {
+  content: "";
+  position: absolute;
+  top: 2px;
+  left: 2px;
+  width: 21px;
+  height: 27px;
+  background: url("../img/circle.png");
+  transition: all .2s;
+}
+
+[type="radio"]:not(:checked) + label:after {
+  opacity: 0;
+  transform: scale(0);
+}
+
+[type="radio"]:checked + label:after {
+  opacity: 1;
+  transform: scale(1);
+}
+
+.page-form-date > .page-form__title {
+  display: inline-block;
+  vertical-align: top;
+  position: relative;
+}
+.page-form-date > .page-form__title::after {
+  content: "";
+  position: absolute;
+  top: 18px;
+  left: 196px;
+  width: 209px;
+  height: 9px;
+  background: url("../img/hr_mini_line.png");
+}
+.page-form-date > span {
+  display: inline-block;
+  margin-left: 30px;
+  margin-top: -17px;
+  vertical-align: top;
+  font-size: 36px;
+  font-family: "Courier New", Courier, monospace;
+}
+
+/*# sourceMappingURL=style.css.map */
